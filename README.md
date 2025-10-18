@@ -143,12 +143,48 @@ npm run dev
 ### Frontend (.env)
 - `VITE_API_URL` - Backend API URL (default: http://localhost:5000/api)
 
+## AI Optimization Process
+
+The application uses Google Gemini 2.5 Flash AI model to optimize Amazon product listings. The AI is prompted with a specialized prompt that positions it as an Amazon listing optimization specialist.
+
+### AI Prompt Strategy
+
+The AI receives the following context and instructions:
+
+1. **Role Definition**: The AI is positioned as an Amazon listing optimization specialist with expertise in e-commerce SEO and content compliance.
+
+2. **Input Processing**: The AI analyzes:
+   - Original product title
+   - Existing bullet points
+   - Current product description
+
+3. **Optimization Tasks**:
+   - **Title Optimization**: Creates keyword-rich titles that maintain readability while following Amazon's character and style guidelines
+   - **Bullet Points Refinement**: Rewrites up to 5 bullet points focusing on customer benefits, clarity, and Amazon policy compliance
+   - **Description Enhancement**: Develops persuasive descriptions that highlight key features while adhering to Amazon's content standards
+   - **SEO Keyword Suggestions**: Identifies 3-5 new relevant keywords to improve search visibility and organic ranking
+
+4. **Output Format**: The AI returns structured JSON with optimized content for each component.
+
+### Reasoning Behind the Approach
+
+- **Compliance-First**: Ensures all optimized content adheres to Amazon's strict content policies
+- **SEO Optimization**: Focuses on keyword integration to improve search ranking
+- **Customer-Centric**: Emphasizes customer benefits over technical features
+- **Structured Output**: Uses JSON format for reliable data parsing and integration
+
 ## Database Schema
 
 The application uses a single `optimizations` table to store:
 - Original and optimized product information
 - ASIN for product identification
 - Timestamps for tracking
+
+## Future Enhancements
+- **Review Analysis**: Analyze customer reviews to identify improvement opportunities
+- **Export Functionality**: Export optimized listings to various formats (CSV, Excel, Amazon bulk upload)
+- **User Authentication**: Multi-user support with role-based access control
+- **API Rate Limiting**: Implement rate limiting and usage tracking for API calls
 
 ## Author
 
