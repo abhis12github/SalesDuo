@@ -295,7 +295,7 @@ const HistoryPage = () => {
                 <div className="bg-dark-800/30 p-4 rounded-lg">
                   <h4 className="font-semibold text-white mb-2">Product Information</h4>
                   <p className="text-dark-300">ASIN: <span className="text-white font-mono">{selectedItem.asin}</span></p>
-                  <p className="text-dark-300">Status: <span className="text-green-400 capitalize">{selectedItem.status}</span></p>
+                  <p className="text-dark-300">Status: <span className="text-green-400 capitalize">{selectedItem.status || 'Optmized'}</span></p>
                 </div>
 
                 {/* Titles Comparison */}
